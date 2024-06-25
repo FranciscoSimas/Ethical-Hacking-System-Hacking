@@ -1,8 +1,4 @@
-# Ethical Hacking System Hacking Documentation
-
-## Overview
-
-This project involves setting up a network of virtual machines on AWS, using various operating systems, to demonstrate the use of Responder for capturing network authentication requests. The steps include setting up the machines, configuring necessary software, running Responder, and using John the Ripper to crack captured passwords.
+# Ethical Hacking System Hacking Setup Instructions
 
 ## Prerequisites
 
@@ -16,7 +12,6 @@ This project involves setting up a network of virtual machines on AWS, using var
 
 Create four virtual machines (VMs) on AWS with the following operating systems:
 1. Windows 11
-2. Windows Server 2016
 3. Ubuntu
 
 ### Step 2: Configure Ubuntu VM
@@ -50,7 +45,7 @@ Create four virtual machines (VMs) on AWS with the following operating systems:
 
 ### Step 3: Access Other VMs
 
-1. **Windows 11 and Windows Server 2016:**
+1. **Windows 11:**
    - Connect via RDP using their respective publicIPs.
 
 2. **Ubuntu:**
@@ -107,7 +102,3 @@ Create four virtual machines (VMs) on AWS with the following operating systems:
 ### Conclusion
 
 By following these steps, you can set up a test environment to capture and analyze network authentication requests using Responder and crack the captured passwords using John the Ripper. This setup is useful for learning and demonstrating network security and penetration testing techniques.
-
-
-
-
