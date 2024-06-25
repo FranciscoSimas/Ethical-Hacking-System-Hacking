@@ -1,50 +1,27 @@
-Certainly! Here's a revised version of your README file, focusing on the scenario involving Responder and summarizing the lab objectives and environment:
+# Ethical Hacking System Hacking Documentation
 
----
+## Overview
 
-## Gain Access to the System
+This project involves creating a network of virtual machines on AWS to demonstrate the use of Responder for capturing network authentication requests. The primary objectives include setting up VMs with different operating systems, configuring Responder to capture credentials, and using John the Ripper to analyze captured data for password vulnerabilities.
 
-Gaining access involves obtaining unauthorized access to a target system to modify or steal sensitive information.
+## Lab Scenario
 
-### Lab Scenario
+For professional ethical hackers or pen testers, gaining access to a target system involves exploiting vulnerabilities in the system's access control mechanisms. This phase typically includes password cracking, vulnerability exploitation, and potentially social engineering techniques to obtain unauthorized access to sensitive information.
 
-For ethical hackers or penetration testers, gaining access to a system often starts by exploiting vulnerabilities in the system's access control mechanisms. This includes techniques like password cracking, vulnerability exploitation, and social engineering.
+## Lab Objectives
 
-**Password Cracking:** Recovering passwords from transmitted or stored data is critical. It helps users recover lost passwords but can also aid attackers in gaining unauthorized access by exploiting weak passwords.
+- **Demonstrate Network Authentication Capture:** Use Responder to intercept and analyze authentication requests on the network.
+- **Password Cracking:** Employ John the Ripper to crack captured password hashes and assess password security.
+- **Lab Environment Setup:** Configure AWS instances with Windows 11 and Ubuntu for a diverse testing environment.
 
-**Vulnerability Exploitation:** Attackers leverage discovered vulnerabilities to execute exploits on remote systems, enabling unauthorized access.
+## Lab Environment
 
-### Lab Objectives
+To conduct this lab, the following components are required:
+- AWS Account with appropriate permissions
+- Terminal access (Terminus or any preferred terminal)
+- RDP Client for accessing Windows instances
 
-- **Active Online Attack:** Use Responder to extract OS version, client IP, and username/password hashes.
-- **Password Auditing:** Employ tools like L0phtCrack to audit system passwords.
-- **Exploit Discovery:** Identify and exploit vulnerabilities found on exploit sites.
-- **Client-side Exploitation:** Establish a session via client-side vulnerabilities.
-- **Remote System Access:** Gain access using tools like Armitage and TheFatRat.
-- **Buffer Overflow Attack:** Execute a buffer overflow attack for system access.
 
-### Lab Environment
+## Conclusion
 
-To conduct this lab, you'll need:
-
-- Virtual machines for Windows 10, Windows Server 2016, Parrot Security, and Ubuntu.
-- Web browsers with internet access.
-- Administrator privileges to run tools effectively.
-
-**Tools:** L0phtCrack for password auditing, downloadable from its official website. Screenshots may vary if using the latest version.
-
-### Lab Duration
-
-Estimated Time: 100 minutes
-
-### Overview of Gaining Access
-
-Previous phases like footprinting, reconnaissance, scanning, enumeration, and vulnerability assessment help identify security weaknesses. This information guides techniques like password cracking and vulnerability exploitation to gain unauthorized system access.
-
-### Perform Active Online Attack using Responder
-
-Using Responder on Ubuntu (10.10.10.9) to target Windows 10 (10.10.10.10), extract OS version, client details, and username/password hashes.
-
----
-
-This summary condenses the key aspects of gaining unauthorized system access using Responder and related tools, providing a clear outline of objectives and requirements for the lab setup.
+By following this documentation, you can simulate and analyze network security scenarios using Responder and John the Ripper. This lab setup is instrumental in learning and demonstrating ethical hacking techniques focused on system hacking and password vulnerability assessment.
