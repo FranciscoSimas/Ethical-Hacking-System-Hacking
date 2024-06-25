@@ -109,6 +109,5 @@ Create four virtual machines (VMs) on AWS with the following operating systems:
 By following these steps, you can set up a test environment to capture and analyze network authentication requests using Responder and crack the captured passwords using John the Ripper. This setup is useful for learning and demonstrating network security and penetration testing techniques.
 
 
-Ensure you have a GitHub repository to document this setup process, including all necessary configuration files, screenshots, and example outputs.
 
 
