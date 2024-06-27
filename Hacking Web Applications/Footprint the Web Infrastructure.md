@@ -35,8 +35,27 @@ whatweb -v www.simasgame.cloudns.ch
 
 whatweb --log-verbose=SimasGmae_Report www.simasgame.cloudns.ch - esse comando cria um .txt com o report agora visto.
 
-em situações reais hackers podem usar essas informações para encontrar vulnerabilities e dar exploit nelas depois
+ainda podemos verificar se o site está vulneravel a Clickjacking com o seguinte html
 
+```html
+<html>
+<head>
+<title>Clickjack Vulnerability Test</title>
+</head>
+<body>
+<p>Website is vulnerable to clickjacking!</p>
+<iframe src="https://www.simasgame.cloudns.ch" width="1920" height="1080"></iframe>
+</body>
+</html>
+```
+
+executando o ficheiro html... se aparecer a mensagem em cima quer dizer que está vulneravel.
+
+![Captura de ecrã 2024-06-27 221453](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/32549023-5680-4b2e-b0dd-15170b3354be)
+
+
+
+em situações reais hackers podem usar essas informações para encontrar vulnerabilities e dar exploit nelas depois
 
 Por aqui acaba a etapa de reconnaissance usando o Whois, DNS interrogation, port and services discovery, banner grabing and firewall detection.
 
