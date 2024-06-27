@@ -22,6 +22,9 @@ Configurar um site no IIS envolve abrir portas no firewall, criar e configurar o
 7. Marque todas as opções (Domínio, Privada, Pública) e clique em **Avançar**.
 8. Nomeie a regra como `Abertura da Porta 80 e 443` e clique em **Concluir**.
 
+![image](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/73f69e44-53da-42c7-bade-447f0f4532e3)
+
+
 ## 2. Criar um Site no IIS e Modificar o Default Web Site
 
 1. IIS é o servidor web da Microsoft utilizado para hospedar sites e aplicações web.
@@ -44,6 +47,9 @@ Configurar um site no IIS envolve abrir portas no firewall, criar e configurar o
 3. Clique em **Default Web Site**.
 4. No painel **Ações**, clique em **Explorar** para abrir a pasta raiz do site (`C:\inetpub\wwwroot`).
 5. Substitua o arquivo `index.html` .
+
+![image](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/38146e41-8250-4967-8715-267661f6f17b)
+
 
 ## 3. Configurar o DNS no Server Manager
 
@@ -70,6 +76,9 @@ Configurar um site no IIS envolve abrir portas no firewall, criar e configurar o
 3. Em **Endereço IP**, insira o endereço IP público do seu servidor web.
 4. Clique em **Adicionar Host**.
 
+![image](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/aadfa382-c0bc-4166-916e-20f048237218)
+
+
 ## 4. Configurar o CloudDNS
 
 1. CloudDNS é um serviço que permite gerenciar DNS de forma eficiente, flexível e grátis.
@@ -86,6 +95,9 @@ Configurar um site no IIS envolve abrir portas no firewall, criar e configurar o
    - **Nome**: deixe em branco para o domínio raiz e outro com `www` para subdomínio.
    - **Endereço**: insira o endereço IP público do seu servidor web.
 5. Clique em **Salvar**.
+
+![image](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/b65e890b-582c-4990-9e47-e36565c47e62)
+
 
 ## 5. Configurar Bindings no IIS para HTTP
 
@@ -104,6 +116,9 @@ Configurar um site no IIS envolve abrir portas no firewall, criar e configurar o
 7. Em **Port**, insira `80`.
 8. Em **Hostname**, insira `simasgame.cloudns.ch` e outro `www.simasgame.cloudns.ch`.
 9. Clique em **OK**.
+
+![image](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/4f8b883f-5c65-4b75-b8c4-53a7d7d9b456)
+
 
 ## 6. Instalar e Configurar Certify the Web para HTTPS
 
@@ -124,6 +139,9 @@ Configurar um site no IIS envolve abrir portas no firewall, criar e configurar o
 4. Clique em **Add**.
 5. Clique em **Request Certificate**.
 6. Após a conclusão, o certificado será instalado automaticamente no IIS.
+7. O Binding de 443 é automaticamente adicioando nos dois hostnames no IIS
+
+![image](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/e611088d-3404-44d2-9efb-56181177c742)
 
 
 ## Conclusão
