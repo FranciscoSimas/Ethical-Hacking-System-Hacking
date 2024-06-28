@@ -1,42 +1,86 @@
-1- Web application reconnaissance
+### Ethical Hacking: Web Application Reconnaissance
 
+This project demonstrates various techniques for web application reconnaissance, including whois, nmap, telnet, whatweb, and clickjacking vulnerability tests. Below are the steps and the results of using these tools, providing a basic and straightforward explanation of each.
+
+---
+
+#### 1. WHOIS Lookup
+
+**Command:**
+```sh
 whois 54.235.172.57
-![Captura de ecrã 2024-06-27 201419](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/4147183e-1fc0-492a-a568-2841abe9c7f1)
+```
+
+**Description:**
+WHOIS lookup provides information about the registered owner of an IP address or domain name. 
+
+**Result:**
+![WHOIS Result](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/4147183e-1fc0-492a-a568-2841abe9c7f1)
 
 ---
----
 
+#### 2. Nmap Scan
+
+**Command:**
+```sh
 nmap -T4 -A -v www.simasgame.cloudns.ch
+```
 
-portas
-![Captura de ecrã 2024-06-27 195225](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/d8ae0c0f-949d-4904-ac56-fcfecbb6fbed)
+**Description:**
+Nmap is a network scanning tool that identifies open ports, services, and potential vulnerabilities on the target host.
+
+**Port Scan Result:**
+![Nmap Port Scan Result](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/d8ae0c0f-949d-4904-ac56-fcfecbb6fbed)
+
+**Detailed Information:**
+![Nmap Detailed Info](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/8e4cb303-a002-40f3-b202-6c000eacd90a)
 
 ---
----
 
-MAC, DNS name, NetBIOS, OS, SSL cert
-![Captura de ecrã 2024-06-27 195558](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/8e4cb303-a002-40f3-b202-6c000eacd90a)
+#### 3. Telnet Banner Grabbing
 
----
----
-
+**Command:**
+```sh
 telnet www.simasgame.cloudns.ch 80
 GET / HTTP/1.0
-![Captura de ecrã 2024-06-27 200041](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/7f61b95b-f3cc-4787-add8-4a046f60585e)
+```
 
-Dá para ver o server que tá usando no caso é Microsoft-HTTPAPI/2.0
+**Description:**
+Telnet is used to connect to remote servers. Banner grabbing reveals the server software and version.
+
+**Result:**
+![Telnet Result](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/7f61b95b-f3cc-4787-add8-4a046f60585e)
+
+**Server Information:**
+```plaintext
+Microsoft-HTTPAPI/2.0
+```
 
 ---
----
 
-também tem esse comando do whatweb, dá para ver, ip, plugin information e http header information
+#### 4. WhatWeb Analysis
+
+**Command:**
+```sh
 whatweb -v www.simasgame.cloudns.ch
-![Captura de ecrã 2024-06-27 201728](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/4345c146-4f00-426f-b5dd-0a2612b87208)
+```
 
-whatweb --log-verbose=SimasGmae_Report www.simasgame.cloudns.ch - esse comando cria um .txt com o report agora visto.
+**Description:**
+WhatWeb identifies websites' technologies, including server information, plugins, and other metadata.
 
-ainda podemos verificar se o site está vulneravel a Clickjacking com o seguinte html
+**Result:**
+![WhatWeb Result](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/4345c146-4f00-426f-b5dd-0a2612b87208)
 
+**Logging:**
+```sh
+whatweb --log-verbose=SimasGame_Report www.simasgame.cloudns.ch
+```
+
+---
+
+#### 5. Clickjacking Vulnerability Test
+
+**HTML Code:**
 ```html
 <html>
 <head>
@@ -49,13 +93,17 @@ ainda podemos verificar se o site está vulneravel a Clickjacking com o seguinte
 </html>
 ```
 
-executando o ficheiro html... se aparecer a mensagem em cima quer dizer que está vulneravel.
+**Description:**
+This HTML code checks if a website is vulnerable to clickjacking by embedding it in an iframe. If the message appears, the site is vulnerable.
 
-![Captura de ecrã 2024-06-27 221453](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/32549023-5680-4b2e-b0dd-15170b3354be)
+**Result:**
+![Clickjacking Test Result](https://github.com/FranciscoSimas/Ethical-Hacking-System-Hacking/assets/145347669/32549023-5680-4b2e-b0dd-15170b3354be)
+
+---
+
+### Conclusion
+
+In real-world scenarios, hackers can use this information to find and exploit vulnerabilities. This guide covers the reconnaissance stage using tools like WHOIS, DNS interrogation, port and services discovery, banner grabbing, and firewall detection. Below are the results for each command used, illustrating what information they reveal.
 
 
-
-em situações reais hackers podem usar essas informações para encontrar vulnerabilities e dar exploit nelas depois
-
-Por aqui acaba a etapa de reconnaissance usando o Whois, DNS interrogation, port and services discovery, banner grabing and firewall detection.
 
