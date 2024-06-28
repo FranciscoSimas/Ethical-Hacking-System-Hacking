@@ -1,5 +1,3 @@
-### README.md
-
 # Burp Suite Setup and Intruder Usage
 
 Este projeto demonstra como configurar o Burp Suite para interceptar o tráfego do navegador e usar o Intruder para realizar ataques de força bruta com wordlists de usuários e senhas.
