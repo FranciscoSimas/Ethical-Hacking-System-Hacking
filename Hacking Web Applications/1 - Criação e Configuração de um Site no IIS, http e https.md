@@ -144,9 +144,7 @@ Configurar um site no IIS envolve abrir portas no firewall, criar e configurar o
 
 ### 6.4. Configurar Mapeamento de Handler para PHP no IIS
 
-1. Abra o
-
- **Gerenciador do IIS**.
+1. Abra o **Gerenciador do IIS**.
 2. No painel **Conexões**, selecione o servidor ou o site onde deseja configurar o PHP.
 3. No painel **Central de Recursos**, clique em **Mapeamento de Manipuladores**.
 4. No painel **Ações**, clique em **Adicionar Módulo de Mapeamento...**.
